@@ -241,6 +241,10 @@ const MapComponent = () => {
     }
   };
 
+  const handleMapView = () => {
+    navigate('/map-view'); // Navigate to the map view route
+  };
+
   return (
     <div style={{ height: "100vh", width: "100vw" }}>
       {" "}
@@ -281,6 +285,12 @@ const MapComponent = () => {
         <button className="bg-blue-400 p-2 rounded" onClick={handleRoute}>
           Find Route
         </button>
+
+        {/* Button to navigate to map view */}
+        <button className="bg-green-400 ml-2 p-2 rounded" onClick={handleMapView}>
+          Map-View
+        </button>
+        
         <button
           onClick={() => navigate("/")}
           className="flex items-center p-2 bg-transparent hover:bg-gray-100 rounded-lg focus:outline-none"

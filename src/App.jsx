@@ -5,6 +5,7 @@ import MapComponent from "./components/MapComponent";
 import LiveLocation from "./components/LiveLocation";
 import Landing from "./pages/Landing";
 import SelectLocation from "./pages/SelectLocation";
+import MapView from "./components/MapView"; // Import the MapView component
 
 function App() {
   return (
@@ -25,6 +26,14 @@ function App() {
           element={
             <div className="App h-screen w-screen overflow-scroll">
               <LiveLocation />
+            </div>
+          }
+        />
+        <Route
+          path="/map-view" // New route for MapView
+          element={
+            <div className="App h-screen w-screen overflow-scroll">
+              <MapView /> {/* Use the MapView component here */}
             </div>
           }
         />
